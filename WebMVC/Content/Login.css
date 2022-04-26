@@ -1,0 +1,201 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif
+}
+
+body {
+    background: #ecf0f3 !important;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.logincontent {
+    min-width: 350px;
+    padding: 40px 30px 30px 30px;
+    background-color: #ecf0f3;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.errormessage {
+    max-width: 350px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    display: flex;
+    flex-direction: column;
+    color: red;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    width: 100%;
+    margin: 0px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+
+    .logo img {
+        width: 80px;
+        display: flex;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        box-shadow: 0px 0px 3px #5f5f5f, 0px 0px 0px 5px #ecf0f3, 8px 8px 15px #a7aaa7, -8px -8px 15px #fff;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+.logincontent .name {
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 1.3px;
+    padding-left: 10px;
+    color: #555
+}
+input[type="text"] {
+    background: transparent;
+    border: none;
+}
+.logincontent .form-field input {
+    width: 100%;
+    display: block;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    color: #666;
+    padding: 10px 15px 10px 10px;
+}
+    .logincontent .form-field {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 10px;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff
+    }
+
+    .logincontent .form-field .fas {
+        color: #555
+    }
+
+.logincontent .btn {
+    box-shadow: none;
+    width: 100%;
+    height: 40px;
+    background-color: #03A9F4;
+    color: #fff;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #b1b1b1, -3px -3px 3px #fff;
+    letter-spacing: 1.3px
+}
+input:-webkit-autofill {
+    -webkit-background-clip: text;
+}
+.fs-6 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+.logincontent .btn:hover {
+    background-color: #039BE5
+}
+
+.logincontent a {
+    text-decoration: none;
+    font-size: 10pt;
+    color: #03A9F4
+}
+
+    .logincontent a:hover {
+        color: #039BE5
+    }
+
+@media(max-width: 380px) {
+    .logincontent {
+        margin: 30px 20px;
+        padding: 40px 15px 15px 15px
+    }
+}
+
+@media(max-width: 600px) {
+    .wrapper {
+        padding-top: 50px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+.lds-dual-ring.hidden {
+    display: none;
+}
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/*Spinner Styles*/
+.lds-dual-ring {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+    .lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 5% auto;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

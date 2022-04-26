@@ -1,0 +1,24 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/Login_Layout.cshtml";
+}
+<div class="logincontent">
+    <div class="logo"> <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt=""> </div>
+    <div class="text-center mt-4 name"> My Shop </div>
+    <form class="p-3 mt-3">
+        <div class="form-field d-flex align-items-center">
+            <span><img src="~/Content/images/icon/icons8-email-open-24.png" /></span>
+            <input type="email" name="txtemail" id="txtemail" autocomple="false" placeholder="Enter your email address" pattern="^[a-zA-Z0-9._+-]+@("@")[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$" title="Please Enter Valid Email" maxlength="255" required />
+        </div>
+        <div class="form-field d-flex align-items-center">
+            <span><img src="~/Content/images/icon/icons8-forgot-password-24.png" /></span>
+            <input type="password" name="txtpassword" autocomple="false" id="txtpassword" placeholder="Enter your password" maxlength="255" title="Please Enter Valid Password" required />
+        </div>
+        <button type="button" class="btn mt-3" id="btnlogin">Login</button>
+    </form>
+    <div class="text-center fs-6"> <a href="#">Forget password?</a></div>
+    <div class="errormessage">
+    </div>
+</div>
+<div id="loader" class="lds-dual-ring hidden overlay"></div>
+<script src="~/Scripts/Admin/Login.js"></script>
